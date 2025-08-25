@@ -112,7 +112,7 @@ class CoinFlipApp:
         self.ax.set_ylabel('Excess Heads Over Tails (Percentage)')
         self.ax.set_title('The Law of Large Numbers')
         self.ax.grid(True, alpha=0.3)
-        self.ax.legend()
+        # Don't call legend() here - wait for actual data
         
     def flip_coin(self):
         # Simulate coin flip
@@ -171,7 +171,7 @@ class CoinFlipApp:
             self.ax.set_ylabel('Excess Heads Over Tails (Percentage)')
             self.ax.set_title('The Law of Large Numbers')
             self.ax.grid(True, alpha=0.3)
-            self.ax.legend()
+            self.ax.legend()  # Only call legend when we have data
             
             # Set y-axis limits to show from -50% to +50% like the reference
             self.ax.set_ylim(-50, 50)
